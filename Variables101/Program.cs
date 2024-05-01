@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Exercices : Inversion de variables");
+﻿using Variables101;
+
+Console.WriteLine("Exercices : Inversion de variables");
 
 Console.WriteLine("Valeurs initiales : ");
 int a = 1;
