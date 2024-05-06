@@ -32,16 +32,27 @@ public class Tests
     }
 
     [Fact]
+    public void Ex2MinTableau_TresGrandTableau()
+    {
+        // ================================ CONSIGNES =================================
+        // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
+        var tableau = BuildArray(10000);
+        // ================================ CONTROLES =================================
+        var result = Exercises.Ex2MinTableau(tableau);
+        using var scope = new AssertionScope();
+        result.Should().Be(tableau.Min());
+    }
+
+    [Fact]
     public void Ex2MinTableau_TableauVide()
     {
         // ================================ CONSIGNES =================================
         // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
         int[] tableau = [];
-        Random.Shared.Shuffle(tableau);
         // ================================ CONTROLES =================================
         var result = Exercises.Ex2MinTableau(tableau);
         using var scope = new AssertionScope();
-        result.Should().Be(1);
+        result.Should().Be(tableau.Min());
     }
 
     [Fact]
@@ -51,13 +62,22 @@ public class Tests
         // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
         int[] tableau = new[] { 12, 980, 45, 32, 15, 65, 84, 656, 1, 21, 2, 3, 4, 10, 65 };
         Random.Shared.Shuffle(tableau);
-        int min = 0;
-        // ================================ VOTRE CODE ================================
-
-
-
         // ================================ CONTROLES =================================
-        min.Should().Be(1);
+        var result = Exercises.Ex3MaxTableau(tableau);
+        using var scope = new AssertionScope();
+        result.Should().Be(tableau.Max());
+    }
+
+    [Fact]
+    public void Ex3MaxTableau_TresGrandTableau()
+    {
+        // ================================ CONSIGNES =================================
+        // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
+        var tableau = BuildArray(10000);
+        // ================================ CONTROLES =================================
+        var result = Exercises.Ex3MaxTableau(tableau);
+        using var scope = new AssertionScope();
+        result.Should().Be(tableau.Max());
     }
 
     [Fact]
@@ -67,11 +87,32 @@ public class Tests
         // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
         int[] tableau = new[] { 12, 980, 45, 32, 15, 65, 84, 656, 1, 21, 2, 3, 4, 10, 65 };
         Random.Shared.Shuffle(tableau);
-        // ================================ VOTRE CODE ================================
-
-
-
         // ================================ CONTROLES =================================
+        var result = Exercises.Ex4TrierTableau(tableau);
+        using var scope = new AssertionScope();
         tableau.Should().BeInAscendingOrder();
+    }
+
+    [Fact]
+    public void Ex4TrierUnTableau_TresGrandTableau()
+    {
+        // ================================ CONSIGNES =================================
+        // Sans utiliser LINQ, trier le tableau du plus petit au plus grand nombre.
+        var tableau = BuildArray(10000);
+        // ================================ CONTROLES =================================
+        var result = Exercises.Ex4TrierTableau(tableau);
+        using var scope = new AssertionScope();
+        tableau.Should().BeInAscendingOrder();
+    }
+
+    private static int[] BuildArray(int taille)
+    {
+        int[] tableau = new int[taille];
+        for (int i = 0; i < taille; i++)
+        {
+            tableau[i] = Random.Shared.Next();
+        }
+        Random.Shared.Shuffle(tableau);
+        return tableau;
     }
 }

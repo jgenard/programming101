@@ -34,4 +34,16 @@ public static class Exercises
         // ================================ NE PAS MODIFIER ===========================
         return max;
     }
+
+    public static int[] Ex4TrierTableau(int[] tableau)
+    {
+        // ================================ CONSIGNES =================================
+        // Trier le tableau, du plus petit nombre au plus grand nombre.
+        // ================================ VOTRE CODE ================================
+
+
+
+        // ================================ NE PAS MODIFIER ===========================
+        return tableau;
+    }
 }
