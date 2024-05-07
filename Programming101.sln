@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicesConsole", "Exercic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicesCalculatrice", "ExercicesCalculatrice\ExercicesCalculatrice.csproj", "{8BC8D688-D572-4C57-AA68-C5AEB3997A3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7C57552F-AFB6-4859-B455-024A892647C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursTests", "CoursTests\CoursTests.csproj", "{392C6E91-7C8D-43F4-9A9E-7DFAF9439111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,12 @@ Global
 		{8BC8D688-D572-4C57-AA68-C5AEB3997A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BC8D688-D572-4C57-AA68-C5AEB3997A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BC8D688-D572-4C57-AA68-C5AEB3997A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392C6E91-7C8D-43F4-9A9E-7DFAF9439111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392C6E91-7C8D-43F4-9A9E-7DFAF9439111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392C6E91-7C8D-43F4-9A9E-7DFAF9439111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392C6E91-7C8D-43F4-9A9E-7DFAF9439111}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{392C6E91-7C8D-43F4-9A9E-7DFAF9439111} = {7C57552F-AFB6-4859-B455-024A892647C7}
 	EndGlobalSection
 EndGlobal
